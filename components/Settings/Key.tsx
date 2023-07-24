@@ -10,6 +10,7 @@ interface Props {
   onApiKeyChange: (apiKey: string) => void;
 }
 
+const apiKey = 'OtsH_pVibVnQrv8jP8jFECWikt_XY1A9HPseKsCEKEg'
 export const Key: FC<Props> = ({ apiKey, onApiKeyChange }) => {
   const { t } = useTranslation('sidebar');
   const [isChanging, setIsChanging] = useState(false);
@@ -27,6 +28,10 @@ export const Key: FC<Props> = ({ apiKey, onApiKeyChange }) => {
     onApiKeyChange(newKey.trim());
     setIsChanging(false);
   };
+
+  useEffect(() => {
+    handleUpdateKey(apiKey)
+  }, [apiKey])
 
   useEffect(() => {
     if (isChanging) {
