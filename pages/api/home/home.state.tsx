@@ -4,6 +4,7 @@ import { FolderInterface } from '@/types/folder';
 import { OpenAIModel, OpenAIModelID } from '@/types/openai';
 import { PluginKey } from '@/types/plugin';
 import { Prompt } from '@/types/prompt';
+import { OPENAI_API_KEY } from '@/utils/app/const';
 
 export interface HomeInitialState {
   apiKey: string;
@@ -30,7 +31,7 @@ export interface HomeInitialState {
 }
 
 export const initialState: HomeInitialState = {
-  apiKey: 'OtsH_pVibVnQrv8jP8jFECWikt_XY1A9HPseKsCEKEg',
+  apiKey: OPENAI_API_KEY,
   loading: false,
   pluginKeys: [],
   lightMode: 'dark',

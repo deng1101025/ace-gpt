@@ -5,6 +5,9 @@ export const DEFAULT_SYSTEM_PROMPT =
 export const OPENAI_API_HOST =
   process.env.OPENAI_API_HOST || 'https://chimeragpt.adventblocks.cc';
 
+export const OPENAI_API_KEY =
+  process.env.OPENAI_API_KEY || '';
+
 export const DEFAULT_TEMPERATURE = 
   parseFloat(process.env.NEXT_PUBLIC_DEFAULT_TEMPERATURE || "1");
 
